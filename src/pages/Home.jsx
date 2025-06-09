@@ -1,0 +1,32 @@
+import { Link } from "react-router-dom"
+import personalData from "../data/personalData"
+import useStore from "../store/useStore"
+
+const Home = () => {
+
+    const {color} = useStore()
+
+    return(
+        <div className={`flex flex-col items-center justify-center min-h-[70vh] p-6 text-center transition-colors duration-500 ${
+            color ? "bg-gray-900 text-white" : "bg-white text-gray-800"
+        }`}>
+            <img src={personalData.foto} alt="Foto de perfil" className="w-40 h-40 md:w-48 md:h-48 rounded-full shadow-lg mb-6 object-cover transition-transform duration-300 hover:scale-105" />
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-2">Hola! Soy {personalData.nombre} {personalData.apellido}</h1>
+            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-2">{personalData.titulo}</p>
+            <p className="text-md text-gray-500 dark:text-gray-400 mb-4">{personalData.stack}</p>
+            {/* <div className="flex flex-wrap gap-2 justify-center mb-4">
+                {personalData.stack.map((tech, index) => (
+                    <span 
+                        key={index} 
+                        className="bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-blue-100 text-sm font-medium px-3 py-1 rounded-full shadow"
+                    >
+                        {tech}
+                    </span>
+                ))}
+            </div> */}
+            <Link to={"projects"} className="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-full shadow transition">Ver proyectos</Link>
+        </div>
+    )
+}
+
+export default Home
