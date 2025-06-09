@@ -7,8 +7,8 @@ const Cards = ({title, content, isList}) => {
     return(
         <div className={`p-6 rounded-lg shadow-md border transition-colors duration-300 ${
         color
-            ? "bg-white border-gray-300 text-gray-800"
-            : "bg-gray-800 border-gray-700 text-white"
+            ? "bg-gray-800 border-gray-700 text-white"
+            : "bg-white border-gray-300 text-gray-800"
             }`}>
             <h3 className="text-xl font-semibold mb-4">{title}</h3>
             {isList && Array.isArray(content) ? (

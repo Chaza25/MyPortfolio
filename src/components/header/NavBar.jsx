@@ -47,7 +47,7 @@ const NavBar = () => {
                     key={link.to}
                     initial={{ opacity: 0, y: -5 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1 }}
+                    transition={{ delay: index * 0.3}}
                 >
                     <Link to={link.to} className={links(link.to)}>
                     {link.label}
@@ -71,7 +71,7 @@ const NavBar = () => {
                         key={link.to}
                         initial={{ opacity: 0, x: -10 }}
                         animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: index * 0.1 }}
+                        transition={{ delay: index * 0.2 }}
                     >
                         <Link
                         to={link.to}

@@ -6,8 +6,8 @@ import useStore from "../../store/useStore";
 
 const redesSociales = [
     { href: "https://github.com/Chaza25", icon: <FaGithub />, color: "hover:text-blue-500" },
-    { href: "https://www.linkedin.com/in/agust%C3%ADn-chazarreta-cruz-1b8565232/", icon: <FaLinkedin />, color: "hover:text-blue-500" },
     { href: "https://wa.link/py5trx", icon: <FaWhatsapp />, color: "text-green-500 hover:text-green-600" }, 
+    { href: "https://www.linkedin.com/in/agust%C3%ADn-chazarreta-cruz-1b8565232/", icon: <FaLinkedin />, color: "hover:text-blue-500" },
 ];
 
 const Footer = () => {
@@ -37,16 +37,6 @@ const Footer = () => {
             </div>
         </div>
     </footer>
-        // <div className="bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300 py-6 shadow-inner">
-        //     <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between">
-        //         <h2 className="text-sm">© 2025 Agustin Chazarreta Cruz. Todos los derechos reservados.</h2>
-        //         <div className="flex gap-4 mt-2 sm:mt-0 text-xl">
-        //             <a href="https://github.com/Chaza25" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors"> <FaGithub /> </a>
-        //             <a href="https://www.linkedin.com/in/agust%C3%ADn-chazarreta-cruz-1b8565232/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors"> <FaLinkedin/> </a>
-        //             <a href="https://wa.link/py5trx" target="_blank" rel="noopener noreferrer" className="text-green-500 hover:text-green-600 transition text-2xl"> <FaWhatsapp/> </a>
-        //         </div>
-        //     </div>
-        // </div>
     )
 }
 

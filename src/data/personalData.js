@@ -7,7 +7,7 @@ const personalData = {
     foto : fotoPerfil,
     stack : "Desarrollador Web Full-Stack",
     skills : ["PHP", "JS", "MySQL", "Git", "GitHub"],
-    descripcion : "Apasionado por el mundo de la programacion, soñador eterno",
+    descripcion : "Apasionado por el mundo de la programacion",
     hobbies : ["Musica", "Futbol", "Videojuegos"],
 };
 

@@ -59,8 +59,8 @@ const Contact = () => {
             <p className={`text-center mb-6 transition-colors duration-300 ${color ? "text-gray-300" : "text-gray-600"}`}>Para contactarme puedes llenar el siguiente formulario o buscarme en las redes sociales</p>
             <div className="flex justify-center gap-4 mt-2 sm:mt-0 text-xl">
                     <a href="https://github.com/Chaza25" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors"> <FaGithub /> </a>
-                    <a href="https://www.linkedin.com/in/agust%C3%ADn-chazarreta-cruz-1b8565232/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors"> <FaLinkedin/> </a>
                     <a href="https://wa.link/py5trx" target="_blank" rel="noopener noreferrer" className="text-green-500 hover:text-green-600 transition text-2xl"> <FaWhatsapp/> </a>
+                    <a href="https://www.linkedin.com/in/agust%C3%ADn-chazarreta-cruz-1b8565232/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors"> <FaLinkedin/> </a>
             </div>
             <form ref={formRef} action="" onSubmit={handleSubmit} className={`shadow-md rounded-lg p-6 flex flex-col gap-4 transition-colors duration-300 ${
                 color ? "bg-gray-800" : "bg-white"

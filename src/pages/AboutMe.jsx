@@ -13,7 +13,7 @@ const AboutMe = () => {
     },[])
 
     return(
-        <div className={`${!color ? "bg-gray-900 text-white" : "bg-gray-100 text-gray-800"} min-h-screen p-8`}>
+        <div className={`${!color ? "bg-gray-100 text-gray-800" : "bg-gray-900 text-white"} min-h-screen p-8`}>
             <h2 className="text-4xl font-bold text-center mb-10 tracking-wide">Sobre mi</h2>
 
             {datos && (
