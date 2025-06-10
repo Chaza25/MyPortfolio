@@ -101,7 +101,7 @@ const Contact = () => {
                 }`} required></textarea>
                 </div>
 
-                <button type="submit" disabled={enviar} className="bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition">
+                <button type="submit" disabled={enviar} className={`${ color ? "bg-blue-600 hover:bg-blue-700" : "bg-blue-400 hover:bg-blue-600"} text-white py-2 rounded transition`}>
                     {enviar ? "Enviando..." : "Enviar"}
                 </button>
 

@@ -16,7 +16,7 @@ const NavBar = () => {
         setAbrir(!abrir)
     }
 
-    const links = (path) => `hover:text-blue-500 transition-colors duration-300 ${
+    const links = (path) => `hover:text-blue-400 transition-colors duration-300 ${
         location.pathname === path 
         ? "text-blue-600 dark:text-blue-400 font-semibold"
         : color 
@@ -64,7 +64,7 @@ const NavBar = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0.3 }}
-                    className="absolute top-10 left-0 w-44 z-50 bg-white dark:bg-gray-800 rounded shadow-lg flex flex-col gap-2 px-4 py-3 sm:hidden"
+                    className={`absolute top-10 left-0 w-44 z-50 ${color ? "bg-white" : "bg-gray-800"} rounded shadow-lg flex flex-col gap-2 px-4 py-3 sm:hidden`}
                 >
                     {navLinks.map((link, index) => (
                     <motion.div

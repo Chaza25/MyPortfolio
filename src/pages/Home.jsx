@@ -26,7 +26,7 @@ const Home = () => {
                     </span>
                 ))}
             </div> */}
-            <Link to={"projects"} className="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-full shadow transition">Ver proyectos</Link>
+            <Link to={"projects"} className="mt-4 bg-blue-400 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-full shadow transition">Ver proyectos</Link>
         </div>
     )
 }

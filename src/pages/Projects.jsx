@@ -22,8 +22,8 @@ const Projects = () => {
                                 ))}
                             </div>
                             <div className="flex justify-between mt-4">
-                                <a href={proyecto.demo} target="_blank" rel="noopener noreferrer" className={`${color ? "bg-blue-600 hover:bg-blue-700" : "bg-blue-500 hover:bg-blue-600"} text-white px-4 py-1 rounded-full text-sm transition`}>Visita la pagina</a>
-                                <a href={proyecto.remo} target="_blank" rel="noopener noreferrer" className={`${color ? "bg-blue-600 hover:bg-blue-700" : "bg-blue-500 hover:bg-blue-600"} text-white px-4 py-1 rounded-full text-sm transition`}>Repositorio</a>
+                                <a href={proyecto.demo} target="_blank" rel="noopener noreferrer" className={`${color ? "bg-blue-600 hover:bg-blue-700" : "bg-blue-400 hover:bg-blue-600"} text-white px-4 py-1 rounded-full text-sm transition`}>Visita la pagina</a>
+                                <a href={proyecto.remo} target="_blank" rel="noopener noreferrer" className={`${color ? "bg-blue-600 hover:bg-blue-700" : "bg-blue-400 hover:bg-blue-600"} text-white px-4 py-1 rounded-full text-sm transition`}>Repositorio</a>
                             </div>
                         </div>
                     </div>
