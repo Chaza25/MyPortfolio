@@ -14,7 +14,7 @@ const Button = () => {
 
     return(
         <div>
-            <button onClick={handleClick} className="fixed top-4 left-4 z-50 p-3 rounded-full bg-gray-200 dark:bg-gray-700 hover:scale-110 transition duration-300 ease-in-out shadow-lg" title="cambiar tema">
+            <button onClick={handleClick} className="fixed top-4 left-2 z-50 p-3 rounded-full bg-gray-200 dark:bg-gray-700 hover:scale-110 transition duration-300 ease-in-out shadow-lg" title="cambiar tema">
                 {/* {color ? (<FiMoon className="text-white text-xl"/>) : (<FiSun className="text-yellow-500 text-xl"/>)} */}
                 <div className="relative w-6 h-6" style={{
                     transform: `rotate(${rotacion}deg)`,

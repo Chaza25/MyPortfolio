@@ -17,6 +17,7 @@ const Contact = () => {
     const [mensaje, setMensaje] = useState("")
     const [error, setError] = useState(false)
     const {color} = useStore()
+    const [enviar, setEnviar] = useState(false)
 
     const handleChange = (e) => {
         setForm({...form,[e.target.name]: e.target.value},)
@@ -31,6 +32,7 @@ const Contact = () => {
             return
         }
 
+        setEnviar(true)
         emailjs.sendForm("service_h1ob6xq", "template_hvi8fdn", formRef.current, "d3l5kINtTP4TE9hpS")
         .then(() => {
             setMensaje("Mensaje enviado correctamente. ¡Gracias por contactarme!")
@@ -48,6 +50,7 @@ const Contact = () => {
             setMensaje("Ocurrio un error al enviar el formulario. Por favor, intente nuevamente.")
             setError(true)
         })
+        .finally(() => setEnviar(false))
         
     }
         
@@ -98,7 +101,9 @@ const Contact = () => {
                 }`} required></textarea>
                 </div>
 
-                <button type="submit" className="bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition">Enviar</button>
+                <button type="submit" disabled={enviar} className="bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition">
+                    {enviar ? "Enviando..." : "Enviar"}
+                </button>
 
                 {mensaje && (
                     <p className={`font-medium mt-2 ${error ? "text-red-500" : "text-green-500"}`}>
