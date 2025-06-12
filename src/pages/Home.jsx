@@ -10,7 +10,7 @@ const Home = () => {
         <div className={`flex flex-col items-center justify-center min-h-[70vh] p-6 text-center transition-colors duration-500 ${
             color ? "bg-gray-900 text-white" : "bg-white text-gray-800"
         }`}>
-            <img src={personalData.foto} alt="Foto de perfil" className="w-40 h-40 md:w-48 md:h-48 rounded-full shadow-lg mb-6 object-cover transition-transform duration-300 hover:scale-105" />
+            <img src={personalData.foto} alt="Foto de perfil" className="w-40 h-40 md:w-48 md:h-48 rounded-full shadow-lg mb-6 object-cover transition-transform duration-300 hover:scale-134" />
             <h1 className={`text-4xl md:text-5xl font-bold ${
             color ? "text-white" : " text-gray-800"
         } mb-2`}>Hola! Soy {personalData.nombre} {personalData.apellido}</h1>
