@@ -23,7 +23,7 @@ const Cards = ({title, content, isList}) => {
                 ))}
                 </ul>
             ) : (
-                <p>{content}</p>
+                <div>{content}</div>
             )}
         </div>
     )

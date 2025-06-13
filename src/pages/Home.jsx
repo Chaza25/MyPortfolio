@@ -16,16 +16,6 @@ const Home = () => {
         } mb-2`}>Hola! Soy {personalData.nombre} {personalData.apellido}</h1>
             <p className={`text-lg md:text-xl mb-2 ${color ? "text-gray-300" : "text-gray-600"}`}>{personalData.titulo}</p>
             <p className={`text-md ${color ? "text-gray-400" : "text-gray-800"} mb-4`}>{personalData.stack}</p>
-            {/* <div className="flex flex-wrap gap-2 justify-center mb-4">
-                {personalData.stack.map((tech, index) => (
-                    <span 
-                        key={index} 
-                        className="bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-blue-100 text-sm font-medium px-3 py-1 rounded-full shadow"
-                    >
-                        {tech}
-                    </span>
-                ))}
-            </div> */}
             <Link to={"projects"} className="mt-4 bg-blue-400 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-full shadow transition">Ver proyectos</Link>
         </div>
     )

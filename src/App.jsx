@@ -9,10 +9,20 @@ import Footer from "./components/footer/Footer"
 import useStore from "./store/useStore"
 import Button from "./components/Button"
 import ButtonW from "./components/ButtonW"
+// import { useEffect } from "react"
 
 function App() {
 
   const {color} = useStore()
+
+  // useEffect(() => {
+  //   const html = document.documentElement;
+  //   if (color) {
+  //     html.classList.add("dark");
+  //   } else {
+  //     html.classList.remove("dark");
+  //   }
+  // }, [color])
 
   return (
     <div className={color ? "bg-gray-900 text-white min-h-screen" : "bg-white text-black min-h-screen"}>

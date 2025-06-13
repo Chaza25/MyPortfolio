@@ -36,7 +36,7 @@ const AboutMe = () => {
                                 const { icon: Icon, color } = icons[tech];
                                 return (
                                     <div key={idx} className="flex flex-col items-center gap-2">
-                                    <Icon className={`${color} text-4xl hover:scale-110 transition-transform`} />
+                                    <Icon className={`${color} text-4xl hover:scale-130 transition-transform`} />
                                     <span className="text-sm">{tech}</span>
                                     </div>
                                 );
@@ -44,7 +44,7 @@ const AboutMe = () => {
                             </div>
                         </div>
                     }/>
-                    <Cards title="Hobbies" content={datos.hobbies} isList={true}/>
+                    <Cards title="Hobbies" content={datos.hobbies}/>
                 </div>
             )}
             <div className="text-center">
