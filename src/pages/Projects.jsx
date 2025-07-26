@@ -6,7 +6,6 @@ const Projects = () => {
     const {color} = useStore()
 
     return(
-        // https://chluis-portfolio.netlify.app/
         <div className={`${color ? "bg-gray-900 text-white" : "bg-white text-black"} min-h-screen p-6`}>
             <h2 className="text-3xl font-bold mb-8 text-center">Proyectos</h2>
             <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
