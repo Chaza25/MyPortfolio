@@ -10,8 +10,8 @@ const projects = [
         descripcion: "Aplicación fullstack desarrollada en equipo, orientada a la gestión de productos, usuarios y roles dentro de un gimnasio.",
         tecnologias: ["FrontEnd: React-Vite-Tailwind-ReactRouterDOM-Zustand", "BackEnd: Node.js-Express.js", "Base de Datos: MySQL"],
         imagen: Gym,
-        demo: "https://github.com/Chaza25/Gimnasio-front",
-        repo: "https://github.com/Chaza25/Gimnasio-back"
+        repoFront: "https://github.com/Chaza25/Gimnasio-front",
+        repoBack: "https://github.com/Chaza25/Gimnasio-back"
     },
     {
         id: 2,
