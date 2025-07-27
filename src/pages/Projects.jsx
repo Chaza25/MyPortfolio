@@ -11,7 +11,7 @@ const Projects = () => {
             <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {projects.map((proyecto) => (
                     <div key={proyecto.id} className={`${color ? "bg-gray-800 text-white" : "bg-white text-black"} shadow-md p-4 rounded-lg transition`}>
-                            <img src={proyecto.imagen} alt={proyecto.titulo} className="w-full h-72 object-cover transition-transform duration-300 hover:scale-105" />
+                            <img src={proyecto.imagen} alt={proyecto.titulo} className="w-full object-contain rounded-t-lg max-h-60 transition duration-300 hover:scale-105" />
                             <div className="p-4 flex flex-col flex-grow">
                             <h3 className="text-xl font-semibold mb-2">{proyecto.titulo}</h3>
                             <p className="text-sm flex-grow">{proyecto.descripcion}</p>
