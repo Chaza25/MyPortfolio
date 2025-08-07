@@ -2,6 +2,7 @@ import NavBar from "./NavBar"
 import useStore from "../../store/useStore"
 // eslint-disable-next-line no-unused-vars
 import {motion} from "framer-motion"
+import { Link } from "react-router-dom"
 
 const Header = () => {
 
@@ -19,8 +20,10 @@ const Header = () => {
                     transition={{ duration: 0.8 }}
                     >
                     <span className="text-nowrap">
+                        <Link to={"/"}>
                         <span className={`${color ? "text-blue-600" : "text-blue-400"}`}>Agustín</span>{" "}
                         Chazarreta Cruz
+                        </Link>
                         <span className="hidden lg:inline px-1">|</span> {" "}
                     </span> 
                     <span className={`${color ? "text-blue-600" : "text-blue-400"} sm:text-start text-center`}>Full-Stack Developer</span>
