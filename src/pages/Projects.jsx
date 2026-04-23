@@ -8,13 +8,15 @@ import sgc1 from "../assets/SGC Inicio.png"
 import sgc2 from "../assets/SGCdashboard.png"
 import sgc3 from "../assets/SGC panel.png"
 import sgc4 from "../assets/SGC calendario impositivo.png"
+import sgc5 from "../assets/SGC obligaciones.png"
+import sgc6 from "../assets/SGC auditoria.png"
 
 const Projects = () => {
 
     const [current, setCurrent] = useState(0);
     const [openModal, setOpenModal] = useState(false);
 
-    const images = [sgc1, sgc2, sgc3, sgc4]
+    const images = [sgc1, sgc2, sgc3, sgc4, sgc5, sgc6]
 
     const handlers = useSwipeable({
         onSwipedLeft: () => setCurrent((current + 1) % images.length),
