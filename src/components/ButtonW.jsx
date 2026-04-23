@@ -2,11 +2,23 @@ import { FaWhatsapp } from "react-icons/fa"
 
 const ButtonW = () => {
     return(
-        <div>
-            <a href="https://wa.link/py5trx" target="_blank" rel="noopener noreferrer" className="fixed bottom-4 right-4 bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg text-2xl transition-all duration-300 z-50">
-                <FaWhatsapp/>
-            </a>
-        </div>
+        <a
+            href="https://wa.link/py5trx"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Contactar por WhatsApp"
+            className="
+                fixed bottom-5 right-5 z-50
+                bg-green-500 text-white
+                p-4 rounded-full text-2xl
+                shadow-lg
+                transition-all duration-300
+                hover:scale-110 hover:bg-green-600 hover:shadow-2xl
+                animate-bounce
+            "
+        >
+            <FaWhatsapp/>
+        </a>
     )
 }
 

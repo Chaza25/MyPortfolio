@@ -2,6 +2,7 @@ import fotoApi from "../assets/Api.jpg"
 import fotoTodo from "../assets/todoapp.jpg"
 import fotoClase from "../assets/fotoclase.jpg"
 import Gym from "../assets/Gym.png"
+import calculadora from "../assets/calculadora.png"
 
 const projects = [
     {
@@ -33,8 +34,17 @@ const projects = [
     },
     {
         id: 4,
+        titulo: "Calculadora PRO",
+        descripcion: "Calculadora creada con JavaScript, HTML y CSS",
+        tecnologias: ["JavaScript", "HTML", "CSS"],
+        imagen: calculadora,
+        demo: "https://calculator-acc.netlify.app/",
+        repo: "https://github.com/Chaza25/calculadora-js"
+    },
+    {
+        id: 5,
         titulo: "Practicas",
-        descripcion: "Proyecto para realizar en clases",
+        descripcion: "Practica realizada en clases para afianzar conocimientos de Tailwind CSS, no es responsive",
         tecnologias: ["React", "Tailwind"],
         imagen: fotoClase,
         demo: "https://tp2grupo11.netlify.app/",

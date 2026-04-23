@@ -3,6 +3,7 @@ import useStore from "../../store/useStore"
 // eslint-disable-next-line no-unused-vars
 import {motion} from "framer-motion"
 import { Link } from "react-router-dom"
+import Button from "../Button"
 
 const Header = () => {
 
@@ -30,8 +31,9 @@ const Header = () => {
                     </span> 
                     <span className={`${color ? "text-blue-600" : "text-blue-400"} sm:text-start text-center`}>Full-Stack Developer</span>
                     </motion.h1>
-                <div>
+                <div className="flex items-center gap-4">
                     <NavBar/>
+                    <Button/>
                 </div>
             </div>
         </header>
