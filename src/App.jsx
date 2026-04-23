@@ -1,28 +1,15 @@
 import {BrowserRouter, Routes, Route} from "react-router-dom"
-import Home from "./pages/Home"
-import AboutMe from "./pages/AboutMe"
-import Projects from "./pages/Projects"
-import Contact from "./pages/Contact"
 import Error from "./components/Error"
 import Header from "./components/header/Header"
 import Footer from "./components/footer/Footer"
 import useStore from "./store/useStore"
 import Button from "./components/Button"
 import ButtonW from "./components/ButtonW"
-// import { useEffect } from "react"
+import Landing from "./pages/Landing"
 
 function App() {
 
   const {color} = useStore()
-
-  // useEffect(() => {
-  //   const html = document.documentElement;
-  //   if (color) {
-  //     html.classList.add("dark");
-  //   } else {
-  //     html.classList.remove("dark");
-  //   }
-  // }, [color])
 
   return (
     <div className={color ? "bg-gray-900 text-white min-h-screen" : "bg-white text-black min-h-screen"}>
@@ -31,10 +18,7 @@ function App() {
       <BrowserRouter>
         <Header/>
           <Routes>
-            <Route path="/" element={<Home/>}/>
-            <Route path="/AboutMe" element={<AboutMe/>}/>
-            <Route path="/projects" element={<Projects/>}/>
-            <Route path="/contact" element={<Contact/>}/>
+            <Route path="/" element={<Landing/>}/>
             <Route path="*" element={<Error/>}/>
           </Routes>
         <Footer/>

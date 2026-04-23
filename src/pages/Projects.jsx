@@ -87,7 +87,7 @@ const Projects = () => {
                                 <p>El cliente gestionaba su trabajo utilizando múltiples herramientas dispersas como Excel, WhatsApp y notas, lo que generaba desorganización, pérdida de información y dificultad para controlar vencimientos y clientes.</p>
 
                                 <p className="font-semibold text-base">Solución</p>
-                                <p> Desarrollé un Sistema de Gestión Contable (SGC) enfocado en centralizar toda la operación en una única plataforma web. El sistema incluye:
+                                <div> Desarrollé un Sistema de Gestión Contable (SGC) enfocado en centralizar toda la operación en una única plataforma web. El sistema incluye:
                                     <ul className="space-y-2 mt-2">
                                         <li className="flex items-center gap-2">
                                             <FaCircle size={6}/> Gestión de usuarios con roles y permisos (ADMIN, CONTADOR, JUNIOR)
@@ -108,7 +108,7 @@ const Projects = () => {
                                             <FaCircle size={6}/> Módulo de configuración (políticas de contraseñas, alertas, etc.)
                                         </li>
                                     </ul>
-                                </p>
+                                </div>
 
                                 <p className="font-semibold text-base">Resultado</p>
                                 <p>El sistema se encuentra actualmente en uso en producción, permitiendo al cliente optimizar su trabajo diario, centralizar la información y acceder a ella en cualquier momento mediante una aplicación web responsive.</p>

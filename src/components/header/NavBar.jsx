@@ -1,34 +1,56 @@
-import {Link, useLocation} from "react-router-dom"
 // eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from "framer-motion"
 import { GiHamburgerMenu } from "react-icons/gi"
 import { IoMdClose } from "react-icons/io"
 import useStore from "../../store/useStore"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 const NavBar = () => {
 
     const [abrir, setAbrir] = useState(false)
     const {color} = useStore()
-    const location = useLocation()
+    const [active, setActive] = useState("#home")
+
+    useEffect(() => {
+        const sections = document.querySelectorAll("section")
+
+        const handleScroll = () => {
+            let current = "#home"
+
+            sections.forEach((section) => {
+                const sectionTop = section.offsetTop - 100
+
+                if (window.scrollY >= sectionTop) {
+                    current = `#${section.id}`
+                }
+            })
+
+            setActive(current)
+        }
+
+        window.addEventListener("scroll", handleScroll)
+
+        return () => window.removeEventListener("scroll", handleScroll)
+    }, [])
 
     const abrirMenu = () => {
         setAbrir(!abrir)
     }
 
-    const links = (path) => `hover:text-blue-400 transition-colors duration-300 ${
-        location.pathname === path 
-        ? "text-blue-600 dark:text-blue-400 font-semibold"
-        : color 
-        ? "text-gray-300"
-        : "text-gray-700"
-    }`
+    const links = (path) =>
+        `transition-colors duration-300 ${
+            active === path
+                ? "text-blue-500 font-semibold"
+                : color
+                ? "text-gray-300 hover:text-blue-400 hover:scale-105"
+                : "text-gray-700 hover:text-blue-400 hover:scale-105"
+        }`
 
     const navLinks = [
-    { to: "/", label: "Home" },
-    { to: "/AboutMe", label: "About Me" },
-    { to: "/projects", label: "Projects" },
-    { to: "/contact", label: "Contact" }
+        { to: "#home", label: "Home" },
+        { to: "#about", label: "About Me" },
+        { to: "#projects", label: "Projects" },
+        { to: "#contact", label: "Contact" }
     ]
 
     return(
@@ -49,9 +71,9 @@ const NavBar = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.3}}
                 >
-                    <Link to={link.to} className={links(link.to)}>
+                    <a href={link.to} className={`${links(link.to)} cursor-pointer`}>
                     {link.label}
-                    </Link>
+                    </a>
                 </motion.div>
                 ))}
             </div>
@@ -73,30 +95,19 @@ const NavBar = () => {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: index * 0.2 }}
                     >
-                        <Link
-                        to={link.to}
+                        <a
+                        href={link.to}
                         onClick={() => setAbrir(false)}
                         className={links(link.to)}
                         >
                         {link.label}
-                        </Link>
+                        </a>
                     </motion.div>
                     ))}
                 </motion.div>
                 )}
             </AnimatePresence>
     </nav>
-        // <motion.nav 
-        // initial={{ opacity: 0, y: -10 }}
-        // animate={{ opacity: 1, y: 0 }}
-        // transition={{ duration: 0.8 }}
-        // className="mt-2 sm:mt-0 flex gap-6">
-        //     <Link to={"/"} className={links("/")}>Home</Link>
-        //     <Link to={"/AboutMe"} className={links("/AboutMe")}>About Me</Link>
-        //     <Link to={"/projects"} className={links("/projects")}>Projects</Link>
-        //     <Link to={"/contact"} className={links("/contact")}>Contact</Link>
-        // </motion.nav>
-        //Aguschaza10
     )
 }
 

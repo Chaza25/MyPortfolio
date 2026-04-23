@@ -14,3 +14,11 @@
 .animate-fadeIn {
   animation: fadeIn 0.2s ease-out;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}
