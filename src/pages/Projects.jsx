@@ -4,18 +4,17 @@ import { FaCircle } from "react-icons/fa"
 import projects from "../data/projectsData"
 import useStore from "../store/useStore"
 import ProjectModal from "../components/ProjectModal"
+import sgc1 from "../assets/SGC Inicio.png"
+import sgc2 from "../assets/SGCdashboard.png"
+import sgc3 from "../assets/SGC panel.png"
+import sgc4 from "../assets/SGC calendario impositivo.png"
 
 const Projects = () => {
 
     const [current, setCurrent] = useState(0);
     const [openModal, setOpenModal] = useState(false);
 
-    const images = [
-        "/src/assets/SGC Inicio.png",
-        "/src/assets/SGCdashboard.png",
-        "/src/assets/SGC panel.png",
-        "/src/assets/SGC calendario impositivo.png"
-    ]
+    const images = [sgc1, sgc2, sgc3, sgc4]
 
     const handlers = useSwipeable({
         onSwipedLeft: () => setCurrent((current + 1) % images.length),

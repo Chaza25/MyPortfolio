@@ -8,7 +8,7 @@ const projects = [
         id: 1,
         titulo: "PowerHouse GYM",
         descripcion: "Aplicación fullstack desarrollada en equipo, orientada a la gestión de productos, usuarios y roles dentro de un gimnasio.",
-        tecnologias: ["FrontEnd: React-Vite-Tailwind-ReactRouterDOM-Zustand", "BackEnd: Node.js-Express.js", "Base de Datos: MySQL"],
+        tecnologias: ["FrontEnd: React-Vite-Tailwind-Zustand", "BackEnd: Node.js-Express", "Base de Datos: MySQL"],
         imagen: Gym,
         repoFront: "https://github.com/Chaza25/Gimnasio-front",
         repoBack: "https://github.com/Chaza25/Gimnasio-back"
