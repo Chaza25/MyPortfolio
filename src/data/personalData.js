@@ -7,7 +7,7 @@ const personalData = {
     foto : fotoPerfil,
     stack : "Desarrollador Web Full-Stack",
     skills : ["HTML", "CSS", "JavaScript", "Java", "PHP", "Python", "React", "Node", "Tailwind", "Git", "GitHub", "MySQL"],
-    descripcion : "Soy estudiante avanzado de la Tecnicatura Universitaria en Programación en la UTN -FRT. Me considero proactivo, motivado por aprender y superarme constantemente. Complemento mi formación con cursos y capacitaciones en programación e inglés, para seguir perfeccionándome como desarrollador..",
+    descripcion : "Desarrollador Web Full Stack especializado en JavaScript, enfocado en la creación de aplicaciones web modernas, escalables y orientadas a resultados. Graduado como Técnico Universitario en Programación en la UTN-FRT, con experiencia en el desarrollo de un Sistema de Gestión Contable implementado para un cliente real y actualmente en funcionamiento en producción. Apasionado por la mejora continua, complemento mi experiencia con proyectos personales y formación constante en nuevas tecnologías e inglés.",
     hobbies : "La música y el fútbol son dos de mis grandes pasiones. Cuando no estoy explorando nuevas tecnologías, disfruto mantenerme activo con ejercicio y compartir momentos con amigos y familia. También me encanta jugar videojuegos y, en mis ratos de inspiración, escribir código para seguir aprendiendo y creando. Siempre en búsqueda del equilibrio perfecto entre energía, diversión y creatividad.",
 };
 
