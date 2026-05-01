@@ -3,7 +3,7 @@ import fotoPerfil from "../assets/chaza.jpg"
 const personalData = {
     nombre : "Agustin",
     apellido : "Chazarreta Cruz",
-    titulo : "Técnico Universitario en Programacion",
+    titulo : "Técnico Universitario en Programación",
     foto : fotoPerfil,
     stack : "Desarrollador Web Full-Stack",
     skills : ["HTML", "CSS", "JavaScript", "Java", "PHP", "Python", "React", "Node", "Tailwind", "Git", "GitHub", "MySQL"],

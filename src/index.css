@@ -22,3 +22,19 @@ html {
 html {
   scroll-behavior: smooth;
 }
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(-12px) translateX(5px);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+}
+
+.animate-float {
+  animation: float infinite ease-in-out;
+}

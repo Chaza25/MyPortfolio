@@ -158,6 +158,7 @@ const Projects = () => {
                             <div className="p-4 flex flex-col flex-grow">
                             <h3 className="text-xl font-semibold mb-2">{proyecto.titulo}</h3>
                             <p className="text-sm flex-grow">{proyecto.descripcion}</p>
+                            <p className="text-sm flex-grow">{proyecto.nota}</p>
                             <div className="flex flex-wrap gap-2 mt-3">
                                 {proyecto.tecnologias.map((tec, idx) => (
                                     <span key={idx} className={`${color ? "bg-gray-700" : "bg-gray-200"} px-2 py-1 rounded text-xs`}>{tec}</span>
