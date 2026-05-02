@@ -26,11 +26,14 @@ const Home = () => {
                 delaySpeed={1000}
                 /> </h1>
                 <br />
-                <p className={`text-lg md:text-xl mb-2 ${color ? "text-gray-300" : "text-gray-600"}`}>{personalData.titulo} | {personalData.stack}</p>
-                <p className={`text-md ${color ? "text-gray-400" : "text-gray-800"} mb-4`}>Construyo experiencias web dinamicas y funcionales</p>
+                <p className={`text-lg md:text-xl mb-2 ${color ? "text-gray-300" : "text-gray-600"}`}>{personalData.stack} | {personalData.titulo}</p>
+                <p className="text-sm opacity-80 mt-1">
+                    React • Node • MySQL • Python
+                </p>
+                <p className={`text-md ${color ? "text-gray-400" : "text-gray-800"} mb-4`}>Desarrollador Full-Stack enfocado en construir soluciones reales, funcionales y escalables.</p>
                 <a href="#projects" className="mt-4 bg-blue-400 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-full shadow transition">Ver proyectos</a>
                 <a href="#about" className="mt-4 bg-blue-400 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-full shadow transition">Conóceme</a>
-                <div className="absolute inset-0 overflow-hidden">
+                <div className="absolute inset-0 overflow-hidden pointer-events-none">
                     {Object.keys(icons).map((tech, i) => {
                         const iconData = icons[tech];
 
@@ -41,7 +44,7 @@ const Home = () => {
                         return (
                             <Icon
                                 key={i}
-                                className={`absolute text-4xl opacity-30 ${color} animate-float transition-all duration-300 hover:opacity-100 hover:scale-125 hover:drop-shadow-lg`}
+                                className={`absolute text-4xl opacity-30 ${color} animate-float transition-all duration-300 hover:opacity-100 hover:scale-125 hover:drop-shadow-lg pointer-events-auto`}
                                 style={{
                                     top: `${10 + Math.random() * 80}%`,
                                     left: `${5 + Math.random() * 90}%`,
