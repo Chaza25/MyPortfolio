@@ -16,7 +16,7 @@ const AboutMe = () => {
 
     return(
         <div className={`${!color ? "bg-gray-100 text-gray-800" : "bg-gray-900 text-white"} min-h-screen p-8`}>
-            <h2 className="text-4xl font-bold text-center mb-10 tracking-wide">Sobre mi</h2>
+            <h2 className="text-4xl font-bold text-center mb-10 tracking-wide">Sobre mí</h2>
 
             {datos && (
                 <div className="grid gap-8 sm:grid-cols-1 lg:grid-cols-3">
@@ -30,7 +30,7 @@ const AboutMe = () => {
                     />
                     <Cards title="Tecnologías y Skills" content={
                         <div className="mt-8 text-center">
-                            <h3 className="text-2xl font-semibold mb-6">Desarrollador Web Full Stack</h3>
+                            <h3 className="text-2xl font-semibold mb-6">Full-Stack Developer</h3>
                             <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 justify-items-center">
                                 {datos.skills.map((tech, idx) => {
                                 const { icon: Icon, color } = icons[tech];
@@ -44,12 +44,34 @@ const AboutMe = () => {
                             </div>
                         </div>
                     }/>
-                    <Cards title="Hobbies" content={datos.hobbies}/>
+                    <Cards
+                        title="En constante evolución"
+                        content={
+                            <div className="space-y-4">
+                            {datos.perfil.map((item, idx) => (
+                                <div
+                                key={idx}
+                                    className={`${color ? "bg-gray-700 hover:bg-gray-600" : "bg-gray-200 hover:bg-gray-300"} 
+                                    p-4 rounded-xl border-l-4 border-blue-400 shadow-sm hover:shadow-lg 
+                                    transition-all duration-300 hover:-translate-y-1`}
+                                >
+                                <h4 className="font-semibold text-lg mb-2">
+                                    {item.titulo}
+                                </h4>
+
+                                <p className="text-sm leading-relaxed">
+                                    {item.descripcion}
+                                </p>
+                                </div>
+                            ))}
+                            </div>
+                        }
+                    />
                 </div>
             )}
             <div className="text-center">
                 <a 
-                href="/Agustin Chazarreta Cruz CV.pdf"
+                href="/Agustin Chazarreta Cruz. CV.pdf"
                 download
                 aria-label="Descargar Curriculum"
                 className="inline-flex items-center gap-2 mt-10 bg-blue-400 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition hover:scale-105">

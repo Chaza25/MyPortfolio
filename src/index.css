@@ -19,22 +19,41 @@ html {
   scroll-behavior: smooth;
 }
 
-html {
-  scroll-behavior: smooth;
+/* Scroll bands */
+@keyframes scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
-@keyframes float {
-  0% {
-    transform: translateY(0px) translateX(0px);
-  }
-  50% {
-    transform: translateY(-12px) translateX(5px);
-  }
-  100% {
-    transform: translateY(0px) translateX(0px);
-  }
+@keyframes scrollReverse {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(50%); }
 }
 
-.animate-float {
-  animation: float infinite ease-in-out;
+/* Fade in hacia arriba */
+@keyframes fadeInUp {
+  0%   { opacity: 0; transform: translateY(16px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Fade in desde arriba (para la foto) */
+@keyframes fadeInDown {
+  0%   { opacity: 0; transform: translateY(-24px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-scroll {
+  animation: scroll 20s linear infinite;
+}
+
+.animate-scroll-reverse {
+  animation: scrollReverse 20s linear infinite;
+}
+
+.animate-fade-in {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-fade-in-down {
+  animation: fadeInDown 0.6s ease-out;
 }

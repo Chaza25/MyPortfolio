@@ -10,6 +10,7 @@ import sgc3 from "../assets/SGC panel.png"
 import sgc4 from "../assets/SGC calendario impositivo.png"
 import sgc5 from "../assets/SGC obligaciones.png"
 import sgc6 from "../assets/SGC auditoria.png"
+import FeaturedProject from "../components/FeaturedProjects"
 
 const Projects = () => {
 
@@ -25,13 +26,14 @@ const Projects = () => {
     })
 
     const {color} = useStore()
+    const powerhouseProject = projects.find((project) => project.titulo === "PowerHouse GYM")
+    const otherProjects = projects.filter((project) => project.destacado !== true)
 
     return(
         <div className={`${color ? "bg-gray-900 text-white" : "bg-white text-black"} min-h-screen p-6`}>
-            <h2 className="text-3xl font-bold mb-8 text-center">Proyectos</h2>
             {/* PROYECTO DESTACADO */}
             <div className="mb-16">
-                <h3 className="text-2xl font-bold mb-6 text-center">Proyecto en Producción</h3>
+                <h2 className="text-2xl font-bold mb-6 text-center p-4">Proyectos destacados</h2>
 
                 <div className={`${color ? "bg-gray-800" : "bg-gray-100"} rounded-xl shadow-lg p-6 flex flex-col lg:flex-row gap-6`}>
 
@@ -151,8 +153,10 @@ const Projects = () => {
                     </div>
                 </div>
             </div>
+            <FeaturedProject project={powerhouseProject} />
+            <h3 className="font-semibold flex items-center justify-center m-10 text-2xl">Otros proyectos / Prácticas</h3>
             <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {projects.map((proyecto) => (
+                {otherProjects.map((proyecto) => (
                     <div key={proyecto.id} className={`${color ? "bg-gray-800 text-white" : "bg-white text-black"} shadow-md p-4 rounded-lg transition`}>
                             <img src={proyecto.imagen} alt={proyecto.titulo} className="w-full object-contain rounded-t-lg max-h-60 transition duration-300 hover:scale-105" />
                             <div className="p-4 flex flex-col flex-grow">
@@ -172,7 +176,7 @@ const Projects = () => {
                                     </>
                                 ) : (
                                     <>
-                                    <a href={proyecto.demo} target="_blank" rel="noopener noreferrer" className={`${color ? "bg-blue-600 hover:bg-blue-700" : "bg-blue-400 hover:bg-blue-600"} text-white px-4 py-1 rounded-full text-sm transition`}>Visita la pagina</a>
+                                    <a href={proyecto.demo} target="_blank" rel="noopener noreferrer" className={`${color ? "bg-blue-600 hover:bg-blue-700" : "bg-blue-400 hover:bg-blue-600"} text-white px-4 py-1 rounded-full text-sm transition`}>Visita la página</a>
                                     <a href={proyecto.repo} target="_blank" rel="noopener noreferrer" className={`${color ? "bg-blue-600 hover:bg-blue-700" : "bg-blue-400 hover:bg-blue-600"} text-white px-4 py-1 rounded-full text-sm transition`}>Repositorio</a>
                                     </>
                                 )}

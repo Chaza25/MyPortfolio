@@ -87,7 +87,7 @@ const Contact = () => {
                 <div>
                     <label htmlFor="telefono" className={`block font-semibold transition-colors duration-300 ${
                     color ? "text-white" : "text-black"
-                }`}>Numero de celular(Opcional)</label>
+                }`}>Número de celular (Opcional)</label>
                     <input type="tel" name="telefono" id="telefono" value={form.telefono} onChange={handleChange} className={`w-full mt-1 p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400 transition-colors duration-300 ${
                 color ? "bg-gray-700 text-white border-gray-600" : "bg-white text-black border-gray-300"
                 }`}/>

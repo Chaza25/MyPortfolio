@@ -1,5 +1,6 @@
     import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGit, FaGithub, FaJava, FaPhp, FaPython } from "react-icons/fa";
-    import { SiTailwindcss, SiMysql } from "react-icons/si"
+    import { SiTailwindcss, SiMysql, SiVite, SiExpress } from "react-icons/si"
+import { TbBrandReactNative } from "react-icons/tb";
 
     const icons = {
         HTML: { icon: FaHtml5, color: "text-orange-500" },
@@ -13,7 +14,10 @@
         Tailwind: { icon: SiTailwindcss, color: "text-sky-400" },
         Git: { icon: FaGit, color: "text-red-500" },
         GitHub: { icon: FaGithub, color: "text-black dark:text-white" },
-        MySQL: { icon: SiMysql, color: "text-[#00758F]" }
+        MySQL: { icon: SiMysql, color: "text-[#00758F]" },
+        Vite: { icon: SiVite, color: "text-[#646CFF]" },
+        Express: { icon: SiExpress, color: "text-gray-400" },
+        Zustand: { icon: TbBrandReactNative, color: "text-orange-400" }
     };
 
     export default icons

@@ -1,14 +1,49 @@
-import fotoPerfil from "../assets/chaza.jpg"
+import fotoPerfil from "../assets/chaza.jpg";
 
 const personalData = {
-    nombre : "Agustin",
-    apellido : "Chazarreta Cruz",
-    titulo : "Técnico Universitario en Programación",
-    foto : fotoPerfil,
-    stack : "Desarrollador Web Full-Stack",
-    skills : ["HTML", "CSS", "JavaScript", "Java", "PHP", "Python", "React", "Node", "Tailwind", "Git", "GitHub", "MySQL"],
-    descripcion : "Desarrollador Web Full Stack especializado en JavaScript, enfocado en la creación de aplicaciones web modernas, escalables y orientadas a resultados. Graduado como Técnico Universitario en Programación en la UTN-FRT, con experiencia en el desarrollo de un Sistema de Gestión Contable implementado para un cliente real y actualmente en funcionamiento en producción. Apasionado por la mejora continua, complemento mi experiencia con proyectos personales y formación constante en nuevas tecnologías e inglés.",
-    hobbies : "La música y el fútbol son dos de mis grandes pasiones. Cuando no estoy explorando nuevas tecnologías, disfruto mantenerme activo con ejercicio y compartir momentos con amigos y familia. También me encanta jugar videojuegos y, en mis ratos de inspiración, escribir código para seguir aprendiendo y creando. Siempre en búsqueda del equilibrio perfecto entre energía, diversión y creatividad.",
+  nombre: "Agustin",
+  apellido: "Chazarreta Cruz",
+  titulo: "Técnico Universitario en Programación",
+  foto: fotoPerfil,
+  stack: "Full-Stack Software Engineer",
+  skills: [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Java",
+    "PHP",
+    "Python",
+    "React",
+    "Node",
+    "Tailwind",
+    "Git",
+    "GitHub",
+    "MySQL",
+    "Vite",
+    "Express",
+    "Zustand",
+  ],
+  descripcion:
+    "Full Stack Developer especializado en JavaScript, graduado como Técnico Universitario en Programación en la UTN-FRT. Autor y desarrollador único de un Sistema de Gestión Contable actualmente en producción, utilizado por contadores independientes y estudios contables. Trabajo con React, Node.js, Express.js y MySQL, aplicando arquitectura modular y buenas prácticas en cada proyecto. Tengo disponibilidad inmediata y posibilidad de reubicación.",
+  perfil: [
+    {
+        titulo: "Aprendizaje activo",
+        descripcion:
+        "Actualmente perfecciono mis prácticas trabajando de forma continua sobre el SGC en producción. Tengo como próximos objetivos profundizar en TypeScript y comenzar con Next.js para seguir ampliando mi stack.",
+    },
+
+    {
+        titulo: "SGC como producto real",
+        descripcion:
+        "El Sistema de Gestión Contable no es solo un proyecto personal, está siendo comercializado activamente. Me encuentro en búsqueda de nuevos clientes y desarrollando automatizaciones para la captación de los mismos.",
+    },
+
+    {
+        titulo: "Comunidad y referentes",
+        descripcion:
+        "Me mantengo actualizado siguiendo referentes de la industria como MiduDev, consumiendo contenido técnico y reforzando buenas prácticas. Considero fundamental mantenerse conectado con la comunidad para crecer como developer.",
+    },
+  ],  
 };
 
-export default personalData
+export default personalData;

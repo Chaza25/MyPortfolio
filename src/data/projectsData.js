@@ -10,15 +10,16 @@ const projects = [
     {
         id: 1,
         titulo: "PowerHouse GYM",
-        descripcion: "Aplicación fullstack desarrollada en equipo para la gestión integral de un gimnasio. Permite administrar productos, usuarios y roles con distintos niveles de acceso, implementando autenticación, control de permisos y operaciones CRUD completas sobre la base de datos.",
+        descripcion: "Proyecto final universitario desarrollado junto a otro desarrollador. Aplicación fullstack completa para la gestión integral de un gimnasio, combinando un e-commerce con un sistema de administración interno. Flujo de trabajo colaborativo con Git: ramas por feature, pull requests y revisión de código entre ambos desarrolladores. Roles diferenciados: clientes pueden consultar el estado de su membresía ingresando su DNI, mientras que los usuarios del sistema gestionan ventas, membresías y productos desde un panel de administración. CRUD completo de clientes y productos, control de acceso por roles y persistencia de sesión con Zustand + localStorage.",
         tecnologias: [
-            "Frontend: React + Vite + Tailwind + Zustand",
+            "Frontend: React + Vite + Tailwind + Zustand (persist)",
             "Backend: Node.js + Express",
             "Base de Datos: MySQL"
         ],
         imagen: Gym,
         repoFront: "https://github.com/Chaza25/Gimnasio-front",
-        repoBack: "https://github.com/Chaza25/Gimnasio-back"
+        repoBack: "https://github.com/Chaza25/Gimnasio-back",
+        destacado: true,
     },
     {
         id: 2,
