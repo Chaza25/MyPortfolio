@@ -4,8 +4,8 @@ import { FaCircle } from "react-icons/fa"
 import projects from "../data/projectsData"
 import useStore from "../store/useStore"
 import ProjectModal from "../components/ProjectModal"
-import sgc1 from "../assets/SGC Inicio.png"
-import sgc2 from "../assets/SGCdashboard.png"
+import sgc1 from "../assets/SGCdashboard.png"
+import sgc2 from "../assets/SGC Inicio.png"
 import sgc3 from "../assets/SGC panel.png"
 import sgc4 from "../assets/SGC calendario impositivo.png"
 import sgc5 from "../assets/SGC obligaciones.png"
@@ -145,7 +145,7 @@ const Projects = () => {
 
                             <button
                             onClick={() => setOpenModal(true)}
-                            className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm"
+                            className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm cursor-pointer hover:bg-blue-600 transition"
                             >
                                 Ver detalles
                             </button>

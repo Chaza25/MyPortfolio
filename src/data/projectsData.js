@@ -1,6 +1,6 @@
 import fotoApi from "../assets/Api.jpg"
 import fotoTodo from "../assets/todoapp.jpg"
-import fotoClase from "../assets/fotoclase.jpg"
+// import fotoClase from "../assets/fotoclase.jpg"
 import Gym from "../assets/Gym.png"
 import calculadora from "../assets/calculadora.png"
 import pokeApi1 from "../assets/PokeApi1.png"
@@ -77,19 +77,19 @@ const projects = [
         imagen: calculadora,
         demo: "https://calculator-acc.netlify.app/",
         repo: "https://github.com/Chaza25/calculadora-js"
-    },
-    {
-        id: 6,
-        titulo: "Prácticas Tailwind",
-        descripcion: "Proyecto de práctica enfocado en el aprendizaje de Tailwind CSS, aplicando estilos utilitarios y maquetado moderno. No cuenta con diseño responsive ya que su objetivo principal fue reforzar conceptos básicos.",
-        tecnologias: [
-            "React",
-            "Tailwind"
-        ],
-        imagen: fotoClase,
-        demo: "https://tp2grupo11.netlify.app/",
-        repo: "https://github.com/Chaza25/Tp2-Grupo11"
     }
+    // {
+    //     id: 6,
+    //     titulo: "Prácticas Tailwind",
+    //     descripcion: "Proyecto de práctica enfocado en el aprendizaje de Tailwind CSS, aplicando estilos utilitarios y maquetado moderno. No cuenta con diseño responsive ya que su objetivo principal fue reforzar conceptos básicos.",
+    //     tecnologias: [
+    //         "React",
+    //         "Tailwind"
+    //     ],
+    //     imagen: fotoClase,
+    //     demo: "https://tp2grupo11.netlify.app/",
+    //     repo: "https://github.com/Chaza25/Tp2-Grupo11"
+    // }
 ]
 
 export default projects
