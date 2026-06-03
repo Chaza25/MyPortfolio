@@ -4,11 +4,25 @@ import fotoTodo from "../assets/todoapp.jpg"
 import Gym from "../assets/Gym.png"
 import calculadora from "../assets/calculadora.png"
 import pokeApi1 from "../assets/PokeApi1.png"
+import bot from "../assets/bot.png"
+import bar from "../assets/bar.png"
 // import pokeApi2 from "../assets/PokeApi2.png"
 
 const projects = [
     {
         id: 1,
+        titulo: "AI Support Assistant",
+        descripcion: "Asistente inteligente desarrollado con Next.js, TypeScript y OpenAI. Implementa detección de intención, derivación automática de agentes especializados (ventas, soporte y facturación), persistencia de conversaciones, modo oscuro y diseño responsive. Además, incorpora un sistema de fallback local que mantiene el funcionamiento del chatbot cuando la API de OpenAI no está disponible o no existen créditos disponibles, garantizando una experiencia continua para el usuario.",
+        tecnologias: [
+            "Next.js", "TypeScript", "Tailwind CSS", "OpenAI API", "shadcn/ui", "Vercel"
+        ],
+        imagen: bot,
+        demo: "https://chat-bot-beta-swart.vercel.app/",
+        repo: "https://github.com/Chaza25/ChatBot",
+        destacado: true,
+    },
+    {
+        id: 2,
         titulo: "PowerHouse GYM",
         descripcion: "Proyecto final universitario desarrollado junto a otro desarrollador. Aplicación fullstack completa para la gestión integral de un gimnasio, combinando un e-commerce con un sistema de administración interno. Flujo de trabajo colaborativo con Git: ramas por feature, pull requests y revisión de código entre ambos desarrolladores. Roles diferenciados: clientes pueden consultar el estado de su membresía ingresando su DNI, mientras que los usuarios del sistema gestionan ventas, membresías y productos desde un panel de administración. CRUD completo de clientes y productos, control de acceso por roles y persistencia de sesión con Zustand + localStorage.",
         tecnologias: [
@@ -22,7 +36,23 @@ const projects = [
         destacado: true,
     },
     {
-        id: 2,
+        id: 3,
+        titulo: "Concepto Web para Bar Artesanal en Philadelphia",
+        descripcion: "Concepto visual desarrollado como propuesta para un proyecto freelance de un bar ubicado en Philadelphia. El objetivo fue transmitir la experiencia del lugar a través de una narrativa visual basada en arquitectura, hierro forjado, iluminación cálida y storytelling, priorizando diseño responsive, experiencia de usuario y una estética premium.",
+        tecnologias: [
+            "React",
+            "Vite",
+            "Tailwind CSS",
+            "Framer Motion",
+            "Netlify"
+
+        ],
+        imagen: bar,
+        demo: "https://artesanobar.netlify.app/",
+        repo: "https://github.com/Chaza25/demobar"
+    },
+    {
+        id: 4,
         titulo: "PokeAPI App",
         descripcion: "Aplicación web backend-driven que integra el consumo de una API externa con persistencia de datos en la nube. Permite consultar Pokémon en tiempo real desde la PokeAPI, procesar la información y almacenarla en una base de datos MySQL, implementando un sistema CRUD completo con paginación y visualización de imágenes.",
         nota: "⚠️ Debido al uso de servicios gratuitos de hosting, la aplicación puede presentar un tiempo de carga inicial mayor luego de un período de inactividad.",
@@ -41,7 +71,7 @@ const projects = [
         repo: "https://github.com/Chaza25/PokeApi"
     },
     {
-        id: 3,
+        id: 5,
         titulo: "ToDo App",
         descripcion: "Aplicación web para la gestión de tareas que permite crear, editar y eliminar pendientes, con feedback visual y manejo de estado en tiempo real. Enfocada en la experiencia de usuario y organización de información.",
         tecnologias: [
@@ -53,7 +83,7 @@ const projects = [
         repo: "https://github.com/Chaza25/ToDo-APP"
     },
     {
-        id: 4,
+        id: 6,
         titulo: "Dragon Ball API App",
         descripcion: "Aplicación frontend que consume una API pública para mostrar información de personajes de Dragon Ball Z. Implementa manejo de estado con hooks, renderizado dinámico y componentes reutilizables.",
         tecnologias: [
@@ -66,7 +96,7 @@ const projects = [
         repo: "https://github.com/Chaza25/Proyecto-Api"
     },
     {
-        id: 5,
+        id: 7,
         titulo: "Calculadora PRO",
         descripcion: "Calculadora web desarrollada con JavaScript puro, enfocada en la lógica de operaciones matemáticas, manejo de eventos y manipulación del DOM.",
         tecnologias: [

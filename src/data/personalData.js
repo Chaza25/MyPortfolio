@@ -22,6 +22,8 @@ const personalData = {
     "Vite",
     "Express",
     "Zustand",
+    "Next.js",
+    "TypeScript",
   ],
   descripcion:
     "Full Stack Developer especializado en JavaScript, graduado como Técnico Universitario en Programación en la UTN-FRT. Autor y desarrollador único de un Sistema de Gestión Contable actualmente en producción, utilizado por contadores independientes y estudios contables. Trabajo con React, Node.js, Express.js y MySQL, aplicando arquitectura modular y buenas prácticas en cada proyecto. Tengo disponibilidad inmediata y posibilidad de reubicación.",

@@ -26,6 +26,7 @@ const Projects = () => {
     })
 
     const {color} = useStore()
+    const botProject = projects.find((project) => project.titulo === "AI Support Assistant")
     const powerhouseProject = projects.find((project) => project.titulo === "PowerHouse GYM")
     const otherProjects = projects.filter((project) => project.destacado !== true)
 
@@ -153,6 +154,7 @@ const Projects = () => {
                     </div>
                 </div>
             </div>
+            <FeaturedProject project={botProject} />
             <FeaturedProject project={powerhouseProject} />
             <h3 className="font-semibold flex items-center justify-center m-10 text-2xl">Otros proyectos / Prácticas</h3>
             <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
