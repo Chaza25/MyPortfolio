@@ -4,7 +4,7 @@ import useStore from "../store/useStore"
 import emailjs from "@emailjs/browser"
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion"
-import { MdEmail, MdLocationOn, MdWork } from "react-icons/md"
+import { MdEmail, MdLocationOn, MdWork, MdPhone } from "react-icons/md"
 
 const Contact = () => {
 
@@ -100,6 +100,16 @@ const Contact = () => {
                                 <div className="flex items-center gap-3">
                                     <MdLocationOn className="text-blue-500 text-2xl" />
                                     <span>Argentina · Modalidad remota o híbrida</span>
+                                </div>
+
+                                <div className="flex items-center gap-3">
+                                    <MdPhone className="text-blue-500 text-2xl" />
+                                    <a
+                                        href="tel:+543865636206"
+                                        className="hover:text-blue-500 transition"
+                                    >
+                                        +54 9 3865 636206
+                                    </a>
                                 </div>
 
                                 <div className="flex items-center gap-3">
