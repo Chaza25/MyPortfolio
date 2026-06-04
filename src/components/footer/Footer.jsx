@@ -7,7 +7,7 @@ import useStore from "../../store/useStore";
 const redesSociales = [
     { href: "https://github.com/Chaza25", icon: <FaGithub />, color: "hover:text-blue-500" },
     { href: "https://wa.link/py5trx", icon: <FaWhatsapp />, color: "text-green-500 hover:text-green-600" }, 
-    { href: "https://www.linkedin.com/in/agust%C3%ADn-chazarreta-cruz-1b8565232/", icon: <FaLinkedin />, color: "hover:text-blue-500" },
+    { href: "https://www.linkedin.com/in/agust%C3%ADn-chazarreta-cruz/", icon: <FaLinkedin />, color: "hover:text-blue-500" },
 ];
 
 const Footer = () => {

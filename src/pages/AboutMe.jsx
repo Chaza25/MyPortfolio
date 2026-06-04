@@ -4,6 +4,8 @@ import Cards from "../components/Cards"
 import useStore from "../store/useStore"
 import { FaDownload } from "react-icons/fa"
 import icons from "../data/icons"
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion"
 
 const AboutMe = () => {
 
@@ -15,59 +17,105 @@ const AboutMe = () => {
     },[])
 
     return(
-        <div className={`${!color ? "bg-gray-100 text-gray-800" : "bg-gray-900 text-white"} min-h-screen p-8`}>
+        
+        <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true, amount: 0.2 }}
+            className={`${!color ? "bg-gray-100 text-gray-800" : "bg-gray-900 text-white"} min-h-screen p-8`}
+        >
             <h2 className="text-4xl font-bold text-center mb-10 tracking-wide">Sobre mí</h2>
 
             {datos && (
-                <div className="grid gap-8 sm:grid-cols-1 lg:grid-cols-3">
-                    <Cards title="Mi perfil" content={
-                    <>
-                    <p className="mb-2"><strong>Nombre: </strong>{datos.nombre} {datos.apellido}</p>
-                    <p className="mb-2"><strong>Título: </strong>{datos.titulo}</p>
-                    <p><strong>Descripcion: </strong>{datos.descripcion}</p>
-                    </>
-                    }
-                    />
-                    <Cards title="Tecnologías y Skills" content={
-                        <div className="mt-8 text-center">
-                            <h3 className="text-2xl font-semibold mb-6">Full-Stack Developer</h3>
-                            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 justify-items-center">
-                                {datos.skills.map((tech, idx) => {
-                                const { icon: Icon, color } = icons[tech];
-                                return (
-                                    <div key={idx} className="flex flex-col items-center gap-2">
-                                    <Icon className={`${color} text-4xl hover:scale-130 transition-transform`} />
-                                    <span className="text-sm">{tech}</span>
-                                    </div>
-                                );
-                                })}
-                            </div>
-                        </div>
-                    }/>
-                    <Cards
-                        title="En constante evolución"
-                        content={
-                            <div className="space-y-4">
-                            {datos.perfil.map((item, idx) => (
-                                <div
-                                key={idx}
-                                    className={`${color ? "bg-gray-700 hover:bg-gray-600" : "bg-gray-200 hover:bg-gray-300"} 
-                                    p-4 rounded-xl border-l-4 border-blue-400 shadow-sm hover:shadow-lg 
-                                    transition-all duration-300 hover:-translate-y-1`}
-                                >
-                                <h4 className="font-semibold text-lg mb-2">
-                                    {item.titulo}
-                                </h4>
-
-                                <p className="text-sm leading-relaxed">
-                                    {item.descripcion}
-                                </p>
-                                </div>
-                            ))}
-                            </div>
+                <motion.div
+                    className="grid gap-8 sm:grid-cols-1 lg:grid-cols-3"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.2 }}
+                    variants={{
+                        hidden: {},
+                        visible: {
+                            transition: {
+                                staggerChildren: 0.2
+                            }
                         }
-                    />
-                </div>
+                    }}
+                >
+                    <motion.div
+                        variants={{
+                            hidden: { opacity: 0, y: 30 },
+                            visible: { opacity: 1, y: 0 }
+                        }}
+                        transition={{ duration: 0.5 }}
+                    >
+                        <Cards title="Mi perfil" content={
+                                <>
+                                    <p className="mb-2"><strong>Nombre: </strong>{datos.nombre} {datos.apellido}</p>
+                                    <p className="mb-2"><strong>Título: </strong>{datos.titulo}</p>
+                                    <p><strong>Descripción: </strong>{datos.descripcion}</p>
+                                </>
+                            }
+                        />
+                    </motion.div>
+
+                    <motion.div
+                        variants={{
+                            hidden: { opacity: 0, y: 30 },
+                            visible: { opacity: 1, y: 0 }
+                        }}
+                        transition={{ duration: 0.5 }}
+                    >
+                        <Cards title="Tecnologías y Skills" content={
+                            <div className="mt-8 text-center">
+                                <h3 className="text-2xl font-semibold mb-6">Full-Stack Developer</h3>
+                                <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 justify-items-center">
+                                    {datos.skills.map((tech, idx) => {
+                                    const { icon: Icon, color } = icons[tech];
+                                    return (
+                                        <div key={idx} className="flex flex-col items-center gap-2">
+                                        <Icon className={`${color} text-4xl transition-transform duration-300 hover:scale-125`} />
+                                        <span className="text-sm">{tech}</span>
+                                        </div>
+                                    );
+                                    })}
+                                </div>
+                            </div>
+                        }/>
+                    </motion.div>
+
+                    <motion.div
+                        variants={{
+                            hidden: { opacity: 0, y: 30 },
+                            visible: { opacity: 1, y: 0 }
+                        }}
+                        transition={{ duration: 0.5 }}
+                    >
+                        <Cards
+                            title="En constante evolución"
+                            content={
+                                <div className="space-y-4">
+                                {datos.perfil.map((item, idx) => (
+                                    <div
+                                    key={idx}
+                                        className={`${color ? "bg-gray-700 hover:bg-gray-600" : "bg-gray-200 hover:bg-gray-300"} 
+                                        p-4 rounded-xl border-l-4 border-blue-400 shadow-sm hover:shadow-lg 
+                                        transition-all duration-300 hover:-translate-y-1`}
+                                    >
+                                    <h4 className="font-semibold text-lg mb-2">
+                                        {item.titulo}
+                                    </h4>
+
+                                    <p className="text-sm leading-relaxed">
+                                        {item.descripcion}
+                                    </p>
+                                    </div>
+                                ))}
+                                </div>
+                            }
+                        />
+                    </motion.div>
+                </motion.div>
             )}
             <div className="text-center">
                 <a 
@@ -79,7 +127,7 @@ const AboutMe = () => {
                     Descargar CV
                 </a>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

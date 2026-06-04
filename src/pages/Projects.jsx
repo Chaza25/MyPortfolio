@@ -11,6 +11,8 @@ import sgc4 from "../assets/SGC calendario impositivo.png"
 import sgc5 from "../assets/SGC obligaciones.png"
 import sgc6 from "../assets/SGC auditoria.png"
 import FeaturedProject from "../components/FeaturedProjects"
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion"
 
 const Projects = () => {
 
@@ -31,9 +33,21 @@ const Projects = () => {
     const otherProjects = projects.filter((project) => project.destacado !== true)
 
     return(
-        <div className={`${color ? "bg-gray-900 text-white" : "bg-white text-black"} min-h-screen p-6`}>
+        <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true, amount: 0.1 }}
+            className={`${color ? "bg-gray-900 text-white" : "bg-white text-black"} min-h-screen p-6`}
+        >
             {/* PROYECTO DESTACADO */}
-            <div className="mb-16">
+            <motion.div
+                className="mb-16"
+                initial={{ opacity: 0, scale: 0.96, y: 40 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ duration: 0.7 }}
+                viewport={{ once: true, amount: 0.2 }}
+            >
                 <h2 className="text-2xl font-bold mb-6 text-center p-4">Proyectos destacados</h2>
 
                 <div className={`${color ? "bg-gray-800" : "bg-gray-100"} rounded-xl shadow-lg p-6 flex flex-col lg:flex-row gap-6`}>
@@ -153,13 +167,52 @@ const Projects = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-            <FeaturedProject project={botProject} />
-            <FeaturedProject project={powerhouseProject} />
+            </motion.div>
+
+            <motion.div
+                initial={{ opacity: 0, x: -60 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.7 }}
+                viewport={{ once: true, amount: 0.2 }}
+            >
+                <FeaturedProject project={botProject} />
+            </motion.div>
+            
+            <motion.div
+                initial={{ opacity: 0, x: 60 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.7 }}
+                viewport={{ once: true, amount: 0.2 }}
+            >
+                <FeaturedProject project={powerhouseProject} />
+            </motion.div>
+
             <h3 className="font-semibold flex items-center justify-center m-10 text-2xl">Otros proyectos / Prácticas</h3>
-            <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <motion.div
+                className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.1 }}
+                variants={{
+                    hidden: {},
+                    visible: {
+                        transition: {
+                            staggerChildren: 0.15
+                        }
+                    }
+                }}
+            >
                 {otherProjects.map((proyecto) => (
-                    <div key={proyecto.id} className={`${color ? "bg-gray-800 text-white" : "bg-white text-black"} shadow-md p-4 rounded-lg transition`}>
+                    <motion.div
+                        key={proyecto.id}
+                        variants={{
+                            hidden: { opacity: 0, y: 30 },
+                            visible: { opacity: 1, y: 0 }
+                        }}
+                        transition={{ duration: 0.5 }}
+                        whileHover={{ y: -6, scale: 1.02 }}
+                        className={`${color ? "bg-gray-800 text-white" : "bg-white text-black"} shadow-md p-4 rounded-lg transition`}
+                    >
                             <img src={proyecto.imagen} alt={proyecto.titulo} className="w-full object-contain rounded-t-lg max-h-60 transition duration-300 hover:scale-105" />
                             <div className="p-4 flex flex-col flex-grow">
                             <h3 className="text-xl font-semibold mb-2">{proyecto.titulo}</h3>
@@ -184,14 +237,14 @@ const Projects = () => {
                                 )}
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 ))}
-            </div>
+            </motion.div>
 
             {openModal && (
                 <ProjectModal onClose = {() => setOpenModal(false)} />
             )}
-        </div>
+        </motion.div>
     )
 }
 
