@@ -6,6 +6,7 @@ import calculadora from "../assets/calculadora.png"
 import pokeApi1 from "../assets/PokeApi1.png"
 import bot from "../assets/bot.png"
 import bar from "../assets/bar.png"
+import voicebot from "../assets/voicebot.png"
 // import pokeApi2 from "../assets/PokeApi2.png"
 
 const projects = [
@@ -37,6 +38,23 @@ const projects = [
     },
     {
         id: 3,
+        titulo: "VoiceBot conversacional IA",
+        descripcion: "Voicebot inteligente desarrollado para el sector inmobiliario, orientado a automatizar la atención inicial y la gestión de consultas sobre propiedades. La solución integra un agente conversacional de voz mediante ElevenLabs con una interfaz frontend desarrollada en React, permitiendo procesar interacciones en tiempo real, responder preguntas frecuentes y recopilar información relevante de potenciales clientes.",
+        tecnologias: [
+            "React",
+            "Vite",
+            "Tailwind CSS",
+            "Framer Motion",
+            "Netlify",
+            "ElevenLabs API",
+
+        ],
+        imagen: voicebot,
+        demo: "https://inmobiliariasdemo.netlify.app/",
+        repo: "https://github.com/Chaza25/voicedemo"
+    },
+    {
+        id: 4,
         titulo: "Concepto Web para Bar Artesanal en Philadelphia",
         descripcion: "Concepto visual desarrollado como propuesta para un proyecto freelance de un bar ubicado en Philadelphia. El objetivo fue transmitir la experiencia del lugar a través de una narrativa visual basada en arquitectura, hierro forjado, iluminación cálida y storytelling, priorizando diseño responsive, experiencia de usuario y una estética premium.",
         tecnologias: [
@@ -52,7 +70,7 @@ const projects = [
         repo: "https://github.com/Chaza25/demobar"
     },
     {
-        id: 4,
+        id: 5,
         titulo: "PokeAPI App",
         descripcion: "Aplicación web backend-driven que integra el consumo de una API externa con persistencia de datos en la nube. Permite consultar Pokémon en tiempo real desde la PokeAPI, procesar la información y almacenarla en una base de datos MySQL, implementando un sistema CRUD completo con paginación y visualización de imágenes.",
         nota: "⚠️ Debido al uso de servicios gratuitos de hosting, la aplicación puede presentar un tiempo de carga inicial mayor luego de un período de inactividad.",
@@ -71,7 +89,7 @@ const projects = [
         repo: "https://github.com/Chaza25/PokeApi"
     },
     {
-        id: 5,
+        id: 6,
         titulo: "ToDo App",
         descripcion: "Aplicación web para la gestión de tareas que permite crear, editar y eliminar pendientes, con feedback visual y manejo de estado en tiempo real. Enfocada en la experiencia de usuario y organización de información.",
         tecnologias: [
@@ -83,7 +101,7 @@ const projects = [
         repo: "https://github.com/Chaza25/ToDo-APP"
     },
     {
-        id: 6,
+        id: 7,
         titulo: "Dragon Ball API App",
         descripcion: "Aplicación frontend que consume una API pública para mostrar información de personajes de Dragon Ball Z. Implementa manejo de estado con hooks, renderizado dinámico y componentes reutilizables.",
         tecnologias: [
@@ -96,7 +114,7 @@ const projects = [
         repo: "https://github.com/Chaza25/Proyecto-Api"
     },
     {
-        id: 7,
+        id: 8,
         titulo: "Calculadora PRO",
         descripcion: "Calculadora web desarrollada con JavaScript puro, enfocada en la lógica de operaciones matemáticas, manejo de eventos y manipulación del DOM.",
         tecnologias: [

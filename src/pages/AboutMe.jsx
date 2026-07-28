@@ -119,7 +119,7 @@ const AboutMe = () => {
             )}
             <div className="text-center">
                 <a 
-                href="/Chazarreta Cruz Agustin.pdf"
+                href="/Agustin Chazarreta Cruz CV.pdf"
                 download
                 aria-label="Descargar Curriculum"
                 className="inline-flex items-center gap-2 mt-10 bg-blue-400 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition hover:scale-105">
